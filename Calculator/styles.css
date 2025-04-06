@@ -1,0 +1,276 @@
+:root {
+    --primary: #00d9ff;
+    --primary-dark: #00a6ff;
+    --secondary: #ff2d75;
+    --dark: #0f172a;
+    --darker: #020617;
+    --light: #f8fafc;
+    --glass: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--darker), var(--dark));
+    color: var(--light);
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.calculator-container {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin: 2rem;
+    perspective: 1000px;
+}
+
+.calculator-glass {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: var(--glass-shadow);
+    padding: 1.5rem;
+    transform-style: preserve-3d;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.calculator-container:hover .calculator-glass {
+    transform: translateY(-5px) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                0 0 30px rgba(0, 217, 255, 0.2);
+}
+
+.calculator-reflect {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(0, 217, 255, 0.3), transparent);
+    border-radius: 50%;
+    filter: blur(10px);
+    opacity: 0.7;
+    transform: scale(0.9) translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.calculator-container:hover .calculator-reflect {
+    transform: scale(0.95) translateY(15px);
+    opacity: 0.9;
+}
+
+.display {
+    height: 120px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: right;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+.display::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transform: translateX(-100%);
+}
+
+.calculator-container:hover .display::after {
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+    100% { transform: translateX(100%); }
+}
+
+.previous-operation {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    height: 24px;
+    overflow: hidden;
+}
+
+.current-operation {
+    font-size: 2.5rem;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    color: var(--light);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(0) scale(0.95);
+}
+
+.number {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.number:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.operator {
+    background: rgba(0, 217, 255, 0.2);
+    color: var(--primary);
+}
+
+.operator:hover {
+    background: rgba(0, 217, 255, 0.3);
+}
+
+.equals {
+    background: var(--secondary);
+    color: white;
+}
+
+.equals:hover {
+    background: #ff1a6b;
+    box-shadow: 0 0 15px rgba(255, 45, 117, 0.5);
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.glow-effect {
+    position: relative;
+}
+
+.glow-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, var(--primary) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.glow-effect:hover::before {
+    opacity: 0.3;
+}
+
+.equals.glow-effect::before {
+    background: radial-gradient(circle at center, var(--secondary) 0%, transparent 70%);
+}
+
+.power-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.power-button {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.power-button::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: var(--secondary);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+#power:checked + .power-button::before {
+    transform: scale(1);
+}
+
+.power-button:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 400px) {
+    .calculator-glass {
+        padding: 1rem;
+    }
+    
+    .btn {
+        padding: 0.8rem;
+    }
+}
