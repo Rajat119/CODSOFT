@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova Landing | Modern Web Solutions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="header">
+    <h1>Nova</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+      <button class="toggle-mode" onclick="toggleDarkMode()">
+        <i class="fas fa-moon"></i> Dark Mode
+      </button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <!-- Uncomment for video background -->
+    <!--
+    <video autoplay muted loop class="hero-video">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-coding-on-her-laptop-3983-large.mp4" type="video/mp4">
+    </video>
+    -->
+    <div class="hero-content">
+      <h2>Build Stunning Websites With Nova</h2>
+      <p>The ultimate solution for creating modern, responsive websites that captivate your audience and drive results.</p>
+      <div class="hero-buttons">
+        <a href="#features" class="btn btn-primary">Explore Features</a>
+        <a href="#contact" class="btn btn-secondary">Get Started</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Dashboard Preview">
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-content animate-on-scroll">
+      <h2>About Nova</h2>
+      <p>Nova is a cutting-edge platform designed to help businesses and individuals create beautiful, functional websites with ease. Our mission is to democratize web design by providing powerful tools wrapped in an intuitive interface.</p>
+      
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-number">10K+</div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Templates</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Support</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">99.9%</div>
+          <div class="stat-label">Uptime</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="section-header animate-on-scroll">
+      <h2>Powerful Features</h2>
+      <p>Nova comes packed with everything you need to create a professional website that stands out from the crowd.</p>
+    </div>
+    
+    <div class="feature-box animate-on-scroll">
+      <div class="feature-icon">
+        <i class="fas fa-mobile-alt"></i>
+      </div>
+      <h3>Responsive Design</h3>
+      <p>Your website will look perfect on any device, from smartphones to desktop computers, with our fully responsive templates.</p>
+      <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+    </div>
+    
+    <div class="feature-box animate-on-scroll">
+      <div class="feature-icon">
+        <i class="fas fa-bolt"></i>
+      </div>
+      <h3>Lightning Fast</h3>
+      <p>Optimized for speed with clean code and minimal dependencies to ensure your site loads in the blink of an eye.</p>
+      <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+    </div>
+    
+    <div class="feature-box animate-on-scroll">
+      <div class="feature-icon">
+        <i class="fas fa-palette"></i>
+      </div>
+      <h3>Customizable</h3>
+      <p>Change colors, fonts, layouts and more with our intuitive design controls. No coding required!</p>
+      <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+    </div>
+    
+    <div class="feature-box animate-on-scroll">
+      <div class="feature-icon">
+        <i class="fas fa-search"></i>
+      </div>
+      <h3>SEO Optimized</h3>
+      <p>Built with SEO best practices to help your site rank higher in search results and attract more visitors.</p>
+      <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+    </div>
+    
+    <div class="feature-box animate-on-scroll">
+      <div class="feature-icon">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h3>Secure</h3>
+      <p>Enterprise-grade security features to protect your site and your visitors' data from threats.</p>
+      <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+    </div>
+    
+    <div class="feature-box animate-on-scroll">
+      <div class="feature-icon">
+        <i class="fas fa-headset"></i>
+      </div>
+      <h3>24/7 Support</h3>
+      <p>Our expert support team is available around the clock to help you with any questions or issues.</p>
+      <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <div class="section-header animate-on-scroll">
+      <h2>What Our Customers Say</h2>
+      <p>Don't just take our word for it. Here's what some of our customers have to say about Nova.</p>
+    </div>
+    
+    <div class="testimonial-container">
+      <div class="testimonial-card animate-on-scroll">
+        <div class="testimonial-content">
+          Nova helped me launch my business website in just a few hours. The templates are beautiful and the customization options are endless. I couldn't be happier with the results!
+        </div>
+        <div class="testimonial-author">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" class="author-avatar">
+          <div class="author-info">
+            <h4>Sarah Johnson</h4>
+            <p>CEO, Creative Solutions</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card animate-on-scroll">
+        <div class="testimonial-content">
+          As a developer, I appreciate how clean and well-structured Nova's code is. It's made my workflow so much faster and my clients love the modern designs.
+        </div>
+        <div class="testimonial-author">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="author-avatar">
+          <div class="author-info">
+            <h4>Michael Chen</h4>
+            <p>Web Developer</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card animate-on-scroll">
+        <div class="testimonial-content">
+          The customer support is exceptional. They helped me solve an issue late at night and went above and beyond to ensure I was happy with the solution.
+        </div>
+        <div class="testimonial-author">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Patel" class="author-avatar">
+          <div class="author-info">
+            <h4>Priya Patel</h4>
+            <p>Small Business Owner</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card animate-on-scroll">
+        <div class="testimonial-content">
+          I've tried many website builders, but Nova stands out for its perfect balance of power and simplicity. My site loads incredibly fast and looks professional.
+        </div>
+        <div class="testimonial-author">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Wilson" class="author-avatar">
+          <div class="author-info">
+            <h4>David Wilson</h4>
+            <p>Marketing Director</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-content animate-on-scroll">
+      <h2>Ready to Build Your Dream Website?</h2>
+      <p>Join thousands of satisfied customers who have transformed their online presence with Nova.</p>
+      <div class="cta-buttons">
+        <a href="#contact" class="btn btn-primary">Get Started Now</a>
+        <a href="#features" class="btn btn-secondary">Explore Features</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="contact">
+    <div class="form-container animate-on-scroll">
+      <h3>Get In Touch</h3>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>About Nova</h4>
+        <p>Nova is a modern website builder that helps businesses and individuals create stunning online presences with ease.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Tutorials</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <ul class="footer-links">
+          <li><i class="fas fa-map-marker-alt"></i> 123 Design Street, Creative City</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+          <li><i class="fas fa-envelope"></i> hello@nova.com</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Nova. All Rights Reserved. | Crafted with <i class="fas fa-heart" style="color: #ef4444;"></i> for web enthusiasts</p>
+    </div>
+  </footer>
+
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
