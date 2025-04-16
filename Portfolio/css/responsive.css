@@ -1,0 +1,134 @@
+@media (max-width: 992px) {
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    
+    .section-title h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 0;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .hero {
+        padding-top: 70px;
+        height: auto;
+        padding-bottom: 50px;
+    }
+    
+    .hero-text, .hero-image, .about-image, .about-text {
+        flex: 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .hero-text {
+        order: 2;
+    }
+    
+    .hero-image {
+        order: 1;
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .btn-outline {
+        margin-left: 0;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .skills-list {
+        justify-content: center;
+    }
+
+    .project-links {
+        justify-content: center;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .resume-column {
+        flex: 100%;
+    }
+    
+    .resume-item {
+        padding: 20px;
+    }
+    
+    .resume-item::before {
+        top: 30px;
+    }
+
+    .certifications-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-text h1 {
+        font-size: 30px;
+    }
+    
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-col {
+        flex: 100%;
+        text-align: center;
+    }
+
+    .footer-col h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
