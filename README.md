@@ -31,6 +31,3 @@ This repository contains my completed tasks for the CODSOFT Web Development Inte
 - Full functionality
 - Error handling
 - Clean interface
-
-## 🎥 Project Demo 
-<video src="https://github.com/Rajat119/CODSOFT/raw/main/video3153472467.mp4" controls width="80%">
